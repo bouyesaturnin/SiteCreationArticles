@@ -11,11 +11,23 @@ SECRET_KEY = os.getenv('SECRET_KEY')
 DEBUG = os.getenv('DEBUG') == 'True'
 
 # Gestion propre des hôtes
+# if DEBUG:
+#     ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+# else:
+#     # Remplace par ton domaine final plus tard
+#     ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.onrender.com', '.railway.app']
+
+# Modifie la partie ALLOWED_HOSTS
 if DEBUG:
     ALLOWED_HOSTS = ['localhost', '127.0.0.1']
 else:
-    # Remplace par ton domaine final plus tard
-    ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.onrender.com', '.railway.app']
+    # Ajoute ton URL Render ICI (sans le https://)
+    ALLOWED_HOSTS = [
+        'localhost', 
+        '127.0.0.1', 
+        'site-articles.onrender.com', # Ton URL précise
+        '.onrender.com'
+    ]
 
 # 3. Définition des Applications 📦
 INSTALLED_APPS = [
