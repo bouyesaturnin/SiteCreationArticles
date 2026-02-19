@@ -18,11 +18,11 @@ DEBUG = os.getenv('DEBUG') == 'True'
 #     ALLOWED_HOSTS = ['localhost', '127.0.0.1', '.onrender.com', '.railway.app']
 
 # Modifie la partie ALLOWED_HOSTS
-if DEBUG:
-    ALLOWED_HOSTS = ['localhost', '127.0.0.1']
-else:
+# if DEBUG:
+#     ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+# else:
     # Ajoute ton URL Render ICI (sans le https://)
-    ALLOWED_HOSTS = [
+ALLOWED_HOSTS = [
         'localhost', 
         '127.0.0.1', 
         'site-articles.onrender.com', # Ton URL précise
