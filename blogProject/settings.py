@@ -128,8 +128,12 @@ CLOUDINARY_STORAGE = {
 # 2. Assure-toi que ces lignes sont bien présentes AUSSI
 # 9. Configuration CORS 🌐
 CORS_ALLOWED_ORIGINS = [
-    "http://localhost:5173", # Port par défaut de Vite
+    "http://localhost:5173",  # Pour tes tests locaux
+    "https://ton-site-frontend.vercel.app", # L'adresse que tu auras bientôt
 ]
+
+# Si tu veux être tranquille pendant le développement du front :
+CORS_ALLOW_ALL_ORIGINS = True # (Optionnel, à utiliser avec prudence)
 
 DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 # settings.py
